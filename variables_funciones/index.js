@@ -23,11 +23,31 @@ function mostrar_en_consola(){
 
 //condicionales
 function validar(){
-    const calificacion = prompt('ingrese su calificación:')
-
-    if(calificacion >= 7){
+    const calificacion = prompt('ingrese su calificación:');
+    //condicion -forma 1
+    /*if(calificacion >= 7){
         alert('Estas aprobado')
     }else{
         alert('Estas desaprobado')
+        
     }
+    */
+   //expresion ternario
+    (calificacion>= 7) ? alert('estas aprobado') : alert('desaprobado')
+}
+
+//funcion con retorno y comunicacion entre funciones
+function calcular(){
+    const number = prompt('ingresa un numero: ');
+    const resultado = number * 10
+    //estamos entregando una respuesta
+    return resultado
+}
+
+function visualizar(){
+    //invocamos a la funcion calcular
+    const respuesta = calcular()
+    alert (respuesta)
+
+
 }

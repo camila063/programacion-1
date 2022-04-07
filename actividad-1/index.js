@@ -12,5 +12,6 @@ function sumar(){
 
     const resultado = parseInt(dato1) + parseInt(dato2)
     alert(resultado)
-..
-}
+    
+
+ }

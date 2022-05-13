@@ -14,12 +14,13 @@ const calcular = (temp) => {
         mensaje = 'temperatura desconocida'
     }
 
-        return mensaje 
+    return mensaje 
     
 }
+
 const mostrar = () => {
     const temp = document.getElementById("dato").value
-    const respuesta = calcular (temp)
+    const respuesta = calcular(temp)
     document.getElementById("h_resultado").textContent = respuesta
 }
 

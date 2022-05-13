@@ -10,5 +10,5 @@ function calcular(){
             descuento =2560000 * 0.90
         }
     }
-    document.getElementById("h_respuesta").textContent = descuento
+    document.getElementById("h_respuesta").textContent = '$'+descuento
 }

@@ -7,7 +7,7 @@ const  obtener_usuarios = async () =>{
    usuarios_definidos.forEach(element => {
        let fila = 
        `<tr>
-            <td><img src="" alt=""></td>
+            <td>${element.name}</td>
             <td>${element.username}</td>
             <td>${element.email}</td>
             <td>${element.phone}</td>    

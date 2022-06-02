@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
 </head>
 <body>
     <nav class="navbar bg-t">
@@ -12,14 +13,16 @@
           <span class="navbar-brand mb-0 h1">TRAPECIO</span>
         </div>
       </nav>
-    <input type="number" placeholder="ingrese base mayor">
+    <h4>Cálculo de área</h4>
+    <input type="number" id="inp_a" placeholder="ingrese base mayor">
     <br><br>
-    <input type="number" placeholder="ingrese base menor">
+    <input type="number" id="inp_b" placeholder="ingrese base menor">
     <br><br>
-    <input type="number" placeholder="ingrese altura">
+    <input type="number" id="inp_h" placeholder="ingrese altura">
     <br><br>
     <button id="btn">Calcular</button>
+    <h1 id="resultado"></h1>
 
-    <script src="main.js"></script>
+    <script src="main.js" type="module"></script>
 </body>
 </html>

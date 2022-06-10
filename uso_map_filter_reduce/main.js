@@ -44,3 +44,7 @@ tareas.forEach(element => {
     }
     
 });
+console.log(tareas_prolongadas)
+//filtrar haciendo uso del metodo filter()
+const tareas_prolongadas2 = tareas.filter(tarea => tarea.duracion >= 120)
+console.log(tareas_prolongadas2)

@@ -16,7 +16,7 @@ function mostrar(){
     <br>
     Ultimo elemento es: ${ultimo_elemento}
     <br>
-    La criptomoneda Helium se encuentra en la posicion: ${indice}
+    La criptomoneda Helium se encuentra en la posicion: ${criptos[indice]}
     `
     document.getElementById("p").innerHTML = criptomonedas
 }

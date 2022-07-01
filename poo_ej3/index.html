@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="bootstrao.bundle.min.js"></script>
+</head>
+<body>
+    <nav class="navbar bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand">Navbar</a>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </nav> 
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Descripción:</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="inp_descripcion">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Precio de venta:</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" id="inp_precio">
+                </div>
+                <label class="form-label">Categoria</label>
+                <select id="slt_cat" class="form-select mb-3" aria-label="Default select example">
+                    <option selected>Seleccione</option>
+                    <option value="Heladera">Heladera</option>
+                    <option value="Cocina">Cocina</option>
+                    <option value="TV">TV</option>
+                </select>
+                <button id="btn_guardar" type="button" class="btn btn-outline-info">Guardar</button>
+            </div>
+            <div class="col-lg-8">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nº</th>
+                            <th>Descripcion</th>
+                            <th>Precio de venta</th>
+                            <th>Categoria</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="main.js" type="module"></script>
+</body>
+</html>

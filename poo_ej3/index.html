@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="bootstrao.bundle.min.js"></script>
 </head>
 <body>
     <nav class="navbar bg-dark">
@@ -16,7 +18,7 @@
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
         </div>
-    </nav>
+    </nav> 
     <br>
     <div class="container">
         <div class="row">
@@ -32,11 +34,28 @@
                 <label class="form-label">Categoria</label>
                 <select id="slt_cat" class="form-select mb-3" aria-label="Default select example">
                     <option selected>Seleccione</option>
-                    <option value="1">Heladera</option>
-                    <option value="2">Cocina</option>
-                    <option value="3">TV</option>
+                    <option value="Heladera">Heladera</option>
+                    <option value="Cocina">Cocina</option>
+                    <option value="TV">TV</option>
                 </select>
                 <button id="btn_guardar" type="button" class="btn btn-outline-info">Guardar</button>
+            </div>
+            <div class="col-lg-8">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nº</th>
+                            <th>Descripcion</th>
+                            <th>Precio de venta</th>
+                            <th>Categoria</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+
+
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

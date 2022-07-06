@@ -1,22 +1,19 @@
 const calcular = (n1,n2,n3) => {
-    const bloque1 = Math.pow ()
-    const bloque2
-    return resultado
+    const bloque1 = Math.pow(n2,2)-(4*n1*n3)
+    const bloque2 = Math.sqrt(bloque1)
+    const bloqueA1 = (-n2) + bloque2
+    const bloqueA2 = bloqueA1 / (2*n1)
+    const bloqueB1 = (-n2) - bloque2
+    const bloqueB2 = bloqueB1 / (2*n1)
+    return 'Raiz 1= ' +bloqueA2+ ' Raiz 2= ' +bloqueB2
 }
-
 const mostrar = () => {
-    const datoA = document.getElementById("datoA").value
-    const datoB = document.getElementById("datoB").value 
-    const datoC = document.getElementById("datoC").value
-    //ejecutando la funcion
-    const respuesta = calcular(datoA,datoB,datoC)
-    document.getElementById("h_resultado").textContent = respuesta
-
+    const dato1 = document.getElementById("dato1").value
+    const dato2 = document.getElementById("dato2").value
+    const dato3 = document.getElementById("dato3").value
+    calcular(dato1,dato2,dato3)
+    const respuesta = calcular(dato1,dato2,dato3)   
+    document.getElementById("h_resultado").textContent = respuesta;
 }
-
-
-//encontrar u obtener el boton y guardarlo en la constante
 const boton = document.getElementById("btn_calcular")
-
-//agregamos un evento a escuchar. En caso el click 
 boton.addEventListener("click",mostrar)

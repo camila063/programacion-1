@@ -32,7 +32,7 @@ export default class Producto{
         this.obtener_productos()
     }
     obtener_productos(){
-        /*recolectamos todos los productos aloajdos en el item que estn notacion json, debemos convertirlo en una expresion nativa de javascript
+        /*recolectamos todos los productos alojados en el item que estan en notacion json, debemos convertirlo en una expresion nativa de javascript
             es decir, hacemos un JSON.parse
         */
         let lista_productos = JSON.parse(localStorage.getItem("productos"))
@@ -46,7 +46,7 @@ export default class Producto{
                 <td>${element.precio_venta}</td>
                 <td>${element.categoria}</td>
                 <td>
-                    <button class="btn btn-danger btm-sm">
+                    <button onclick="almacenar_indice(${index})"class="btn btn-danger btm-sm" data-bs-toggle="modal" data-bs-target="#mymodal">
                     <i class="fa fa-trash"> </i>
                     </button>
                 </td>
@@ -58,4 +58,12 @@ export default class Producto{
         document.getElementById("tbody").innerHTML = filas.join('')
 
     }
-}
+    
+    eliminar_producto(indice){
+
+        let lista_productos = JSON.parse (localStorage.getItem("productos"))
+        lista_productos.splice(indice,1)
+        localStorage.setItem("productos", JSON.stringify(lista_productos))
+        this.obtener_productos()
+    }
+}   

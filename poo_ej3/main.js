@@ -21,6 +21,16 @@ function eliminar(){
     //creamos una instancia para para acceder a los  
     //metodos y atributos de la clase producto
     let producto = new Producto()
+    //haciendo uso de la instancia
+    //
     producto.eliminar_producto(indice)
 }
 document.getElementById("btn-eliminar").addEventListener("click",eliminar)
+function actualizar(){
+    //creamos la instancia 
+    let producto = new Producto()
+    //a través de la instancia accedemos o invocamos el metodo
+    //actualizar_producto() existen en archivo producto.js
+    producto.actualizar_producto()
+}
+document.getElementById("btn_actualizar").addEventListener("click",actualizar)

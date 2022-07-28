@@ -39,13 +39,13 @@ export default class Producto{
                 <tr>
                     <td>${index+1}</td>
                     <td>${element.descripcion}</td>
-                    
+                    <td><img src="${element.imagen}" alt="${element.descripcion}" width="60" height="60"></td>
                     <td>${element.precio_venta}</td>
                     <td>
                         <button onclick="almacenar_indice(${index})"class="btn btn-danger btm-sm" data-bs-toggle="modal" data-bs-target="#mymodal">
                         <i class="fa fa-trash"> </i>
                         </button>
-                        <button onclick="editar_formulario(${index})" class="btn btn-primary btn-sm">
+                        <button onclick="editar(${index})" class="btn btn-primary btn-sm">
                         <i class="fa fa-edit"> </i>
                         </button>
                     </td>
@@ -59,7 +59,7 @@ export default class Producto{
     }
     eliminar_pedido(indice){
             let lista_pasteles = JSON.parse (localStorage.getItem("productos"))
-            lista_pasteles.spice(indice,1)
+            lista_pasteles.splice(indice,1)
             localStorage.setItem("productos", JSON.stringify(lista_pasteles))
             this.obtener_pasteles()
     }
@@ -68,8 +68,9 @@ export default class Producto{
     
             let listado_pasteles = JSON.parse(localStorage.getItem("productos"))
             listado_pasteles[indice].descripcion = document.getElementById("inp_descripcion").value
-            listado_pasteles[indice].imagen = document.getElementById("inp_precio").value
             listado_pasteles[indice].precio_venta = document.getElementById("inp_precio").value
+            listado_pasteles[indice].imagen = document.getElementById("inp_img").value
+            listado_pasteles[indice].detalles = document.getElementById("inp_detalles").value
     
             localStorage.setItem("productos",JSON.stringify(listado_pasteles))
     
@@ -78,9 +79,11 @@ export default class Producto{
             document.getElementById("btn_guardar").style.display = "block"
             document.getElementById("btn_actualizar").style.display = "none"
             this.vaciar_formulario()
-            
     }
-    
+    vaciar_formulario(){
+        document.getElementById("form_produc").reset()
+
+    }
 
 }
 

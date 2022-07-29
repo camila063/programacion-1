@@ -40,6 +40,7 @@ export default class Producto{
                     <td>${index+1}</td>
                     <td>${element.descripcion}</td>
                     <td><img src="${element.imagen}" alt="${element.descripcion}" width="60" height="60"></td>
+                    <td>${element.detalles}</td>
                     <td>${element.precio_venta}</td>
                     <td>
                         <button onclick="almacenar_indice(${index})"class="btn btn-danger btm-sm" data-bs-toggle="modal" data-bs-target="#mymodal">

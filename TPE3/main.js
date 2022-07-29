@@ -19,6 +19,11 @@ function eliminar(){
     let indice = localStorage.getItem("indice")
     let producto = new Producto
     producto.eliminar_pedido(indice)
+    const truck_modal =
+    document.querySelector('#mymodal');
+    const modal = 
+    bootstrap.Modal.getInstance(truck_modal);
+    modal.hide()
 }
 document.getElementById("btn_eliminar").addEventListener("click",eliminar)
 

@@ -85,6 +85,30 @@ export default class Producto{
         document.getElementById("form_produc").reset()
 
     }
+    armar_catalogo(){
+        let lista_pasteles = JSON.parse(localStorage.getItem("productos"))
+    
+           let filas = [ ]
+           lista_pasteles.forEach((element,index) =>{
+            
+            let fila = `
+            <div class="card" style="width: 18rem;">
+            <img src="${element.imagen}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">${element.descripcion}</h5>
+                <p class="card-text">${element.precio_venta}</p>
+                <button class="btn-primary" onclick="agregar_pedido('${element.descripcion}','${element.precio_venta}')">Comprar</button>
+            </div>
+            </div>
+            `
+                filas.push(fila)
+
+
+           });
+           document.getElementById("row_1").innerHTML = filas.join('')
+
+
+    }
 
 }
 

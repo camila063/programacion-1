@@ -1,11 +1,8 @@
 import Producto from "./producto.js";
-function agregar () {
-    
+function armar_catalogo(){
+    let lista_pasteles = new Producto()
+    lista_pasteles.armar_catalogo()
 }
-function crear(){
-    let producto = new Producto
-    producto.obtener_pasteles()
+armar_catalogo()
 
 
-}
-crear()

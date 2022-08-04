@@ -32,3 +32,4 @@ function actualizar(){
     producto.actualizar_pasteles()
 }
 document.getElementById("btn_actualizar").addEventListener("click",actualizar)
+
